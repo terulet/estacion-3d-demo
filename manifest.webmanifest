@@ -1,0 +1,14 @@
+{
+  "name": "La Molina · Vista 3D (demo no oficial)",
+  "short_name": "La Molina 3D",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#cfe0f0",
+  "theme_color": "#0f1b2d",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

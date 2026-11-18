@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0f1b2d" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>La Molina · Vista 3D (demo no oficial)</title>
+    <link rel="icon" href="icon-192.png" />
+    <link rel="apple-touch-icon" href="icon-180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="La Molina 3D" />
+    <script type="module" crossorigin src="./assets/index-D1Auqyiq.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DM-QLgZz.css">
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+    <div id="labels"></div>
+
+    <header id="top" class="ui">
+      <div class="brand">
+        <strong>La Molina</strong>
+        <span data-t="sub"></span>
+        <em data-t="badge"></em>
+      </div>
+      <div id="stats"></div>
+      <div id="lang" role="group" aria-label="Idioma">
+        <button data-lang="es">ES</button><button data-lang="ca">CA</button><button data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <nav id="dock" class="ui">
+      <button id="btn-tour" class="primary"><i class="ic ic-play"></i><span data-t="tour"></span></button>
+      <button id="btn-list"><i class="ic ic-list"></i><span data-t="list"></span></button>
+      <button id="btn-season"><i class="ic ic-season"></i><span id="season-label"></span></button>
+      <button id="btn-time"><i class="ic ic-sun"></i><span id="time-label"></span></button>
+      <button id="btn-status" aria-pressed="true"><i class="ic ic-dot"></i><span data-t="status"></span></button>
+      <button id="btn-services" aria-pressed="true"><i class="ic ic-pin"></i><span data-t="services"></span></button>
+      <button id="btn-sound" aria-pressed="true"><i class="ic ic-sound"></i><span data-t="sound"></span></button>
+      <button id="btn-locate"><i class="ic ic-locate"></i><span data-t="locate"></span></button>
+      <button id="btn-masella" aria-pressed="false"><i class="ic ic-layers"></i><span data-t="masella"></span></button>
+    </nav>
+
+    <div id="timebar" class="ui panel" hidden>
+      <div class="tb-row"><input id="hour" type="range" min="6" max="23" step="0.05" aria-label="Hora" /><output id="hour-out"></output></div>
+      <div class="tb-chips"><button data-preset="day" data-t="day"></button><button data-preset="sunset" data-t="sunset"></button><button data-preset="night" data-t="night"></button></div>
+      <div class="tb-chips tb-wx"><button data-wx="clear" data-t="wxClear"></button><button data-wx="clouds" data-t="wxClouds"></button><button data-wx="fog" data-t="wxFog"></button><button data-wx="snow"></button></div>
+    </div>
+
+    <aside id="list" class="ui panel" hidden>
+      <div class="tabs">
+        <button data-tab="pistes" class="on" data-t="pistes"></button>
+        <button data-tab="lifts" data-t="lifts"></button>
+        <button data-tab="services" data-t="services"></button>
+        <button id="list-close" class="x" aria-label="Cerrar">×</button>
+      </div>
+      <input id="search" type="search" autocomplete="off" />
+      <div id="filters"></div>
+      <div id="rows"></div>
+    </aside>
+
+    <section id="card" class="ui panel" hidden></section>
+
+    <div id="caption" class="ui" hidden></div>
+    <div id="hint" class="ui" hidden></div>
+
+    <div id="ride" class="ui panel" hidden>
+      <div class="ride-top">
+        <strong id="ride-name"></strong>
+        <button id="ride-sound" class="icon" aria-label="Sonido"><i class="ic ic-sound"></i></button>
+        <button id="ride-view"></button>
+        <button id="ride-ctl"></button>
+        <button id="ride-input" hidden></button>
+        <button id="ride-min" class="icon" aria-label="Plegar"><i class="ic ic-chev"></i></button>
+        <button id="ride-exit" data-t="exit"></button>
+      </div>
+      <div id="ride-hint" hidden></div>
+      <div id="ride-prof"></div>
+      <div class="ride-data">
+        <span id="ride-alt"></span><span id="ride-slope"></span><span id="ride-left"></span><span id="ride-speed"></span>
+        <span class="speeds"><button data-speed="1" class="on">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button></span>
+      </div>
+    </div>
+
+    <footer id="credits" class="ui" data-t="credits"></footer>
+
+    <div id="loader">
+      <div class="box">
+        <strong>La Molina</strong>
+        <span id="loader-text"></span>
+        <div class="bar"><i id="loader-bar"></i></div>
+      </div>
+    </div>
+  </body>
+</html>
